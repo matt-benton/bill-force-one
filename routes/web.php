@@ -15,4 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('bills', 'BillController@index');
+Route::resource('bills', 'BillController');
