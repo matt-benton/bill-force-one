@@ -10,8 +10,8 @@
         <div class="content">
             <h1>Bill Force One</h1>
             <ul>
-                <li><a href="bills">My Bills</a></li>
-                <li><a href="bills/create">New Bill</li>
+                <li><a href="/bills">My Bills</a></li>
+                <li><a href="/bills/create">New Bill</a></li>
             </ul>
         </div>
     </body>
