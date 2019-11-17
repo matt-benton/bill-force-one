@@ -9,6 +9,10 @@
     <body>
         <div class="content">
             <h1>Bill Force One</h1>
+            <ul>
+                <li><a href="bills">My Bills</a></li>
+                <li>New Bill</li>
+            </ul>
         </div>
     </body>
 </html>
