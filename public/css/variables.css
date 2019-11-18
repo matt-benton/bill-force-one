@@ -1,0 +1,15 @@
+:root{
+    --color-grey-dark-5: #1f2933;
+    --color-grey-dark-4: #323f4b;
+    --color-grey-dark-3: #3e4c59;
+    --color-grey-dark-2: #52606d;
+    --color-grey-dark-1: #616e7c;
+
+    --color-grey-light-5: #7b8794;
+    --color-grey-light-4: #9aa5b1;
+    --color-grey-light-3: #cbd2d9;
+    --color-grey-light-2: #e4e7eb;
+    --color-grey-light-1: #f5f7fa;
+
+    --color-white: #fff;
+}

@@ -1,7 +1,10 @@
-
-<html>
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
-        <title>App Name - @yield('title')</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bill Force One</title>
+        <link rel="stylesheet" type="text/css" href="{{ url('/css/main.css') }}" />
     </head>
     <body>
         <nav>
