@@ -67,7 +67,9 @@ class BillController extends Controller
      */
     public function edit(Bill $bill)
     {
-        //
+        return view('edit', [
+            'bill' => $bill,
+        ]);
     }
 
     /**
@@ -79,7 +81,17 @@ class BillController extends Controller
      */
     public function update(Request $request, Bill $bill)
     {
-        //
+        $bill->name = $request->name;
+        $bill->description = $request->description;
+        $bill->amount = $request->amount;
+        $bill->due_date = $request->due_date;
+        $bill->autopay = $request->autopay ? $request->autopay : 0;
+        $bill->save();
+
+        return back()->with([
+            'bill' => $bill,
+            'message' => 'This bill has been updated successfully.',
+        ]);
     }
 
     /**

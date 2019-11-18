@@ -1,4 +1,4 @@
-<h3>{{ $bill->name }}</h3>
+<h3><a href="/bills/{{ $bill->id }}/edit">{{ $bill->name }}</a></h3>
 <p>{{ $bill->description }}</p>
 <p>amount: {{ $bill->amount }}</p>
 <p>due date: {{ $bill->due_date }}</p>
