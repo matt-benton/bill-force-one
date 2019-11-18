@@ -14,8 +14,18 @@ class BillController extends Controller
      */
     public function index()
     {
+        $bills = Bill::all();
+
+        $bills->map(function ($bill) {
+            $bill->warning = false;
+
+            if ($bill->isPastDue() || $bill->isDueToday()) {
+                $bill->warning = true;
+            }
+        });
+
         return view('bills', [
-            'bills' => Bill::all()
+            'bills' => $bills,
         ]);
     }
 

@@ -2,6 +2,7 @@
 <p>{{ $bill->description }}</p>
 <p>amount: {{ $bill->amount }}</p>
 <p>due date: {{ $bill->due_date }}</p>
+@if ($bill->warning) <p><strong>warning: bill is due</strong></p> @endif
 <p>paid: {{ $bill->paid }}</p>
 <p>autopay: {{ $bill->autopay }}</p>
 <form action="/bills/{{ $bill->id }}/toggle" method="POST">
