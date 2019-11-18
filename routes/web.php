@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::resource('bills', 'BillController');
+Route::put('bills/{bill}/toggle', 'BillController@togglePaidStatus');

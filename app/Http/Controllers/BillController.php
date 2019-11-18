@@ -94,4 +94,17 @@ class BillController extends Controller
 
         return back();
     }
+
+    public function togglePaidStatus(Bill $bill)
+    {
+        if ($bill->paid === 0) {
+            $bill->paid = 1;
+        } else {
+            $bill->paid = 0;
+        }
+
+        $bill->save();
+
+        return back();
+    }
 }

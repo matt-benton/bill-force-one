@@ -19,7 +19,7 @@ class CreateBillsTable extends Migration
             $table->string('description')->nullable();
             $table->integer('amount');
             $table->integer('due_date');
-            $table->date('last_paid_on')->nullable();
+            $table->boolean('paid')->default(0);
             $table->boolean('autopay');
             $table->timestamps();
         });
