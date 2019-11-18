@@ -16,10 +16,10 @@ class CreateBillsTable extends Migration
         Schema::create('bills', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('description');
+            $table->string('description')->nullable();
             $table->integer('amount');
-            $table->date('due_date');
-            $table->date('last_paid_on');
+            $table->integer('due_date');
+            $table->date('last_paid_on')->nullable();
             $table->boolean('autopay');
             $table->timestamps();
         });

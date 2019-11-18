@@ -37,7 +37,15 @@ class BillController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Bill::create([
+            'name' => $request->name,
+            'description' => $request->description,
+            'amount' => $request->amount,
+            'due_date' => $request->due_date,
+            'autopay' => $request->autopay ? $request->autopay : 0,
+        ]);
+
+        return redirect('/bills');
     }
 
     /**
