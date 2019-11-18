@@ -90,6 +90,8 @@ class BillController extends Controller
      */
     public function destroy(Bill $bill)
     {
-        //
+        $bill->delete();
+
+        return back();
     }
 }
