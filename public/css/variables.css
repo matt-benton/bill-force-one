@@ -12,4 +12,12 @@
     --color-grey-light-1: #f5f7fa;
 
     --color-white: #fff;
+
+    --font-small: .6rem;
+    --font-medium: 1.4rem;
+    --font-large: 1.8rem;
+
+    --padding-small: .4rem;
+    --padding-medium: .6rem;
+    --padding-large: 1rem;
 }
