@@ -19,6 +19,12 @@
         <label for="autopay">Autopay</label>
         <input type="checkbox" name="autopay" id="autopay" value="1" @if ($bill->autopay == 1) checked @endif>
         <input type="submit" value="Save">
+
+        <form action="/bills/{{ $bill->id }}" method="POST">
+            @csrf
+            @method('DELETE')
+            <input type="submit" value="Delete">
+        </form>
     </form>
 
     @if (Session::has('message'))

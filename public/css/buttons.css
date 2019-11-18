@@ -1,0 +1,6 @@
+.btn {
+    border: 0;
+    padding: var(--spacing-small) var(--spacing-large);
+    font-size: var(--font-medium);
+    border-radius: 5px;
+}

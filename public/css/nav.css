@@ -1,6 +1,6 @@
 nav {
     height: 100%;
-    font-size: var(--font-medium);
+    font-size: var(--font-large);
 }
 
 .side-nav {
@@ -13,10 +13,8 @@ nav {
 
 .side-nav a {
     width: 100%;
-    /* padding-top: var(--padding-small);
-    padding-bottom: var(--padding-small); */
-    padding: var(--padding-medium);
-    width: 300px;
+    padding: var(--spacing-medium);
+    width: var(--width-medium);
 }
 
 .side-nav a:hover {
@@ -28,7 +26,7 @@ nav {
 }
 
 .icon {
-    width: var(--font-medium);
-    height: var(--font-medium);
+    width: var(--font-large);
+    height: var(--font-large);
     fill: var(--color-white);
 }
