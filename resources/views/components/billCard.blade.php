@@ -5,7 +5,7 @@
     </div>
     <div class="card-body">
         <p>{{ $bill->description }}</p>
-        <p>Due on the {{ $bill->due_date }}</p>
+        <p>Due on the {{ $bill->dueDateWithSuffix() }}</p>
         <!-- @if ($bill->warning) <p><strong>bill is due</strong></p> @endif -->
     </div>
     <div class="card-footer">

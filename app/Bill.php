@@ -48,4 +48,11 @@ class Bill extends Model
 
         return $now->day === $this->attributes['due_date'] && $this->isDue();
     }
+
+    public function dueDateWithSuffix()
+    {
+        $dueDate = new Carbon("2019-01-{$this->attributes['due_date']}", 'America/Chicago');
+
+        return $dueDate->format('jS');
+    }
 }
