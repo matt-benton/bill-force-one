@@ -13,15 +13,20 @@
 
     --color-white: #fff;
 
-    --font-small: .8rem;
-    --font-medium: 1.6rem;
-    --font-large: 2.4rem;
-    --font-larger: 3.2rem;
+    --font-smallest: 1.2rem;
+    --font-smaller: 1.4rem;
+    --font-small: 1.6rem;
+    --font-medium: 1.8rem;
+    --font-large: 2rem;
+    --font-larger: 2.4rem;
+    --font-largest: 3rem;
+    --font-xl: 3.6rem;
 
     --spacing-small: .8rem;
     --spacing-medium: 1.6rem;
     --spacing-large: 2.4rem;
     --spacing-large: 3.2rem;
 
-    --width-medium: 30.4rem;
+    --width-medium: 22.4rem;
+    --width-large: 30.4rem;
 }

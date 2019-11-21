@@ -1,6 +1,6 @@
 nav {
     height: 100%;
-    font-size: var(--font-large);
+    font-size: var(--font-small);
 }
 
 .side-nav {
@@ -12,13 +12,16 @@ nav {
 }
 
 .side-nav a {
-    width: 100%;
     padding: var(--spacing-medium);
     width: var(--width-medium);
 }
 
 .side-nav a:hover {
     background-color: var(--color-grey-dark-5);
+}
+
+.side-nav li {
+    display: flex;
 }
 
 .active {
@@ -29,4 +32,5 @@ nav {
     width: var(--font-large);
     height: var(--font-large);
     fill: var(--color-white);
+    margin-right: var(--spacing-small);
 }

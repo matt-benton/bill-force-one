@@ -16,7 +16,6 @@ html {
 body {
     background-color: var(--color-grey-light-1);
     font-family: 'Work Sans', sans-serif;
-    font-size: 1.6rem;
 }
 
 .container {
@@ -35,4 +34,48 @@ a:visited {
 
 ul {
     list-style-type: none;
+}
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 58%;
+    }
+}
+
+@media (max-width: 992px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 52%;
+    }
+
+    .side-nav {
+        display: none;
+    }
+
+    .bills-list {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    html {
+        font-size: 52%;
+    }
+
+    .side-nav {
+        display: none;
+    }
+
+    .bills-list {
+        justify-content: center;
+    }
+
+    .bills-card {
+        width: 90%;
+    }
 }
