@@ -3,6 +3,7 @@
 @import "bills.css";
 @import "buttons.css";
 @import "forms.css";
+@import "info.css";
 
 * {
     margin: 0;
@@ -20,8 +21,9 @@ body {
 }
 
 .container {
-    display: flex;
-    height: 100vh;
+    display: grid;
+    grid-template-columns: var(--width-medium) 1fr;
+    grid-template-rows: 150px 1fr;
 }
 
 a {

@@ -1,0 +1,23 @@
+.main-info-panel {
+    background-color: var(--color-white);
+    color: var(--color-grey-dark-1);
+    margin: var(--spacing-medium);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.main-info-header {
+    grid-column: span 2;
+    padding: var(--spacing-medium);
+    font-size: var(--font-medium);
+}
+
+.main-info-item {
+    padding: 0 var(--spacing-medium);
+}
+
+.main-info-item-header {
+    color: var(--color-grey-light-4);
+    padding-bottom: var(--spacing-small);
+}

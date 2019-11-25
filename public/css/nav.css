@@ -1,5 +1,5 @@
 nav {
-    height: 100%;
+    grid-row: span 2;
     font-size: var(--font-small);
 }
 
@@ -13,7 +13,7 @@ nav {
 
 .side-nav a {
     padding: var(--spacing-medium);
-    width: var(--width-medium);
+    width: 100%;
 }
 
 .side-nav a:hover {
