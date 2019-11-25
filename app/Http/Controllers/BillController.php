@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Bill;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class BillController extends Controller
@@ -15,17 +16,25 @@ class BillController extends Controller
     public function index()
     {
         $bills = Bill::all();
+        $now = Carbon::now();
 
-        $bills->map(function ($bill) {
-            $bill->warning = false;
+        $sumOfAllBills = 0;
+        $sumOfUnpaidBills = 0;
 
-            if ($bill->isPastDue() || $bill->isDueToday()) {
-                $bill->warning = true;
+        foreach ($bills as $bill) {
+            $this->setWarningStatus($bill);
+            $sumOfAllBills += $bill->amount;
+
+            if ($bill->isDue()) {
+                $sumOfUnpaidBills += $bill->amount;
             }
-        });
+        }
 
         return view('bills', [
             'bills' => $bills,
+            'formattedDate' => $now->toFormattedDateString(),
+            'sumOfAllBills' => $sumOfAllBills,
+            'sumOfUnpaidBills' => $sumOfUnpaidBills,
         ]);
     }
 
@@ -128,5 +137,14 @@ class BillController extends Controller
         $bill->save();
 
         return back();
+    }
+
+    private function setWarningStatus(Bill $bill)
+    {
+        $bill->warning = false;
+
+        if ($bill->isPastDue() || $bill->isDueToday()) {
+            $bill->warning = true;
+        }
     }
 }
