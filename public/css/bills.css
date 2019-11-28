@@ -1,14 +1,12 @@
 .bills-list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: var(--spacing-medium);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: var(--spacing-large);
+    margin-left: var(--spacing-large);
+    margin-right: var(--spacing-large);
 }
 
 .bills-card {
-    width: var(--width-large);
-    height: 39rem;
-    margin: var(--spacing-medium);
     padding: var(--spacing-large);
     background-color: var(--color-white);
     color: var(--color-grey-dark-3);

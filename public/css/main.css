@@ -21,9 +21,10 @@ body {
 }
 
 .container {
+    height: 100vh;
     display: grid;
-    grid-template-columns: var(--width-medium) 1fr;
-    grid-template-rows: 150px 1fr;
+    grid-template-columns: 30rem 1fr;
+    grid-template-rows: 1fr 2fr;
 }
 
 a {
@@ -55,30 +56,10 @@ ul {
     html {
         font-size: 52%;
     }
-
-    .side-nav {
-        display: none;
-    }
-
-    .bills-list {
-        justify-content: center;
-    }
 }
 
 @media (max-width: 576px) {
     html {
         font-size: 52%;
-    }
-
-    .side-nav {
-        display: none;
-    }
-
-    .bills-list {
-        justify-content: center;
-    }
-
-    .bills-card {
-        width: 90%;
     }
 }

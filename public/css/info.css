@@ -1,7 +1,7 @@
 .main-info-panel {
     background-color: var(--color-white);
     color: var(--color-grey-dark-1);
-    margin: var(--spacing-medium);
+    margin: var(--spacing-large);
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
