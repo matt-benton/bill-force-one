@@ -1,6 +1,6 @@
 <div class="bills-card">
     <div class="card-header">
-        <h3>{{ $bill->name }}</h3>
+        <a href="/bills/{{ $bill->id }}/edit"><h3>{{ $bill->name }}</h3></a>
         <span>${{ $bill->amount }}</span>
     </div>
     <div class="card-body">
@@ -18,9 +18,7 @@
                 <input class="btn" type="submit" value="Paid">
             @endif
         </form>
-        <!-- <a href="/bills/{{ $bill->id }}/edit">
-            <button type="button" class="btn">Edit</button>
-        </a> -->
+        
         <!-- <p>autopay: {{ $bill->autopay }}</p> -->
     </div>
 </div>
