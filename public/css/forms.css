@@ -6,7 +6,7 @@
     margin: var(--spacing-large);
 }
 
-form {
+.form {
     font-size: var(--font-medium);
     padding: var(--spacing-medium) var(--spacing-large);
     background-color: var(--color-white);

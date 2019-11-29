@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="form-container">
-        <form action="/bills" method="POST">
+        <form class="form" action="/bills" method="POST">
             @csrf
             <div class="form-group">
                 <label for="name">Name</label>
