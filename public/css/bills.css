@@ -37,6 +37,8 @@
 
 .card-footer {
     display: flex;
+    justify-content: space-between;
+    align-items: baseline;
     padding-top: var(--spacing-large);
 }
 

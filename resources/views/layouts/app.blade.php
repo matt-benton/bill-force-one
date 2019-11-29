@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Bill Force One</title>
-        <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="{{ url('/css/main.css') }}" />
     </head>
     <body>
@@ -37,4 +37,4 @@
         </div>
     </body>
 </html>
-<script src="{{ url('/js/app.js') }}"></script>
+@yield('scripts')

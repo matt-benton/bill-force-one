@@ -5,6 +5,7 @@
 @import "forms.css";
 @import "info.css";
 @import "alerts.css";
+@import "text.css";
 
 * {
     margin: 0;

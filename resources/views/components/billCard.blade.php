@@ -5,7 +5,7 @@
     </div>
     <div class="card-body">
         <p>{{ $bill->description }}</p>
-        <p>Due on the {{ $bill->dueDateWithSuffix() }}
+        <p class="text-highlight">Due on the {{ $bill->dueDateWithSuffix() }}
             @if ($bill->warning) 
                 <?xml version="1.0" encoding="UTF-8"?>
                 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
@@ -26,6 +26,6 @@
             @endif
         </form>
         
-        <!-- <p>autopay: {{ $bill->autopay }}</p> -->
+        @if ($bill->autopay) <p class="text-highlight">autopay on</p> @endif
     </div>
 </div>
