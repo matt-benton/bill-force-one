@@ -33,8 +33,8 @@ class BillController extends Controller
         return view('bills', [
             'bills' => $bills,
             'formattedDate' => $now->toFormattedDateString(),
-            'sumOfAllBills' => $sumOfAllBills,
-            'sumOfUnpaidBills' => $sumOfUnpaidBills,
+            'sumOfAllBills' => number_format($sumOfAllBills, 2),
+            'sumOfUnpaidBills' => number_format($sumOfUnpaidBills, 2),
         ]);
     }
 
