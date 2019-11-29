@@ -8,12 +8,15 @@
         <title>Bill Force One</title>
     </head>
     <body>
-        <div class="content">
-            <h1>Bill Force One</h1>
-            <ul>
-                <li><a href="/bills">My Bills</a></li>
-                <li><a href="/bills/create">New Bill</a></li>
-            </ul>
+        <div class="welcome-container">
+            <div class="welcome-panel">
+                <h1 class="main-heading">Bill Force One</h1>
+                <h3 class="sub-heading">Track Your Monthly Expenses: Know What's Due And When</h3>
+                <ul class="welcome-menu">
+                    <li class="welcome-menu-item"><a href="/bills"><button class="btn">My Bills</button></a></li>
+                    <li class="welcome-menu-item"><a href="/bills/create"><button class="btn">New Bill</button></a></li>
+                </ul>
+            </div>
         </div>
     </body>
 </html>

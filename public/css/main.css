@@ -6,6 +6,7 @@
 @import "info.css";
 @import "alerts.css";
 @import "text.css";
+@import "welcome.css";
 
 * {
     margin: 0;
