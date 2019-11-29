@@ -123,7 +123,7 @@ class BillController extends Controller
     {
         $bill->delete();
 
-        return back();
+        return redirect('/bills');
     }
 
     public function togglePaidStatus(Bill $bill)

@@ -22,7 +22,7 @@ class Bill extends Model
 
     public function getAmountAttribute($value)
     {
-        return number_format($value / 100, 2);
+        return $value / 100;
     }
 
     public function isPaid()

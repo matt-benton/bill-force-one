@@ -5,3 +5,11 @@
     border-left: 3px solid var(--color-grey-dark-1);
     font-size: var(--font-small);
 }
+
+.alert-buttons {
+    margin-top: var(--spacing-large);
+}
+
+#delete-bill-dialog {
+    display: none;
+}

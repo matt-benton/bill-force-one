@@ -37,3 +37,4 @@
         </div>
     </body>
 </html>
+<script src="{{ url('/js/app.js') }}"></script>
