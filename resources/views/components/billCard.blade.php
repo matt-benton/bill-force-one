@@ -4,7 +4,6 @@
         <span>${{ $bill->amount }}</span>
     </div>
     <div class="card-body">
-        <p>{{ $bill->description }}</p>
         <p class="text-highlight">Due on the {{ $bill->dueDateWithSuffix() }}
             @if ($bill->warning) 
                 <?xml version="1.0" encoding="UTF-8"?>
@@ -14,6 +13,7 @@
                 </svg>
             @endif
         </p>
+        <p>{{ $bill->description }}</p>
     </div>
     <div class="card-footer">
         <form action="/bills/{{ $bill->id }}/toggle" method="POST">
