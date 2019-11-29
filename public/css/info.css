@@ -2,19 +2,15 @@
     background-color: var(--color-white);
     color: var(--color-grey-dark-1);
     margin: var(--spacing-large);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-}
-
-.main-info-header {
-    grid-column: span 2;
-    padding: var(--spacing-medium);
-    font-size: var(--font-medium);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .main-info-item {
-    padding: 0 var(--spacing-medium);
+    width: 100%;
+    padding: var(--spacing-medium);
+    border-right: 1px solid var(--color-grey-light-2);
 }
 
 .main-info-item-header {

@@ -1,5 +1,8 @@
 <div class="main-info-panel">
-    <h3 class="main-info-header">{{ $date }}</h3>
+    <div class="main-info-item">
+        <h3 class="main-info-item-header">Today's Date</h3>
+        <h1>{{ $date }}</h1>
+    </div>
     <div class="main-info-item">
         <h3 class="main-info-item-header">Monthly Total</h3>
         <h1>${{ $sumOfAllBills }}</h1>

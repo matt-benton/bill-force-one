@@ -24,7 +24,7 @@ body {
     height: 100vh;
     display: grid;
     grid-template-columns: 30rem 1fr;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: auto 3fr;
 }
 
 a {
