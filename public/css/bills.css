@@ -39,3 +39,9 @@
     display: flex;
     padding-top: var(--spacing-large);
 }
+
+.warning-icon {
+    width: var(--font-small);
+    height: var(--font-small);
+    fill: orange;
+}
