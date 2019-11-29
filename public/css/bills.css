@@ -48,3 +48,10 @@
     height: var(--font-small);
     fill: orange;
 }
+
+.paid-icon {
+    width: var(--font-large);
+    height: var(--font-large);
+    fill: mediumseagreen;
+    margin-left: var(--spacing-small);
+}

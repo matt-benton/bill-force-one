@@ -3,4 +3,5 @@
     padding: var(--spacing-small) var(--spacing-large);
     font-size: var(--font-medium);
     border-radius: 0;
+    display: flex;
 }
