@@ -1,0 +1,7 @@
+.alert {
+    background-color: var(--color-grey-light-3);
+    width: 100%;
+    padding: var(--spacing-large);
+    border-left: 3px solid var(--color-grey-dark-1);
+    font-size: var(--font-small);
+}

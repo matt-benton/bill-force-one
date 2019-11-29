@@ -8,6 +8,11 @@
         <input class="btn" type="submit" value="Delete">
     </form> -->
     <div class="form-container">
+        @if (Session::has('message'))
+            <div class="alert">
+                {{ Session::get('message') }}
+            </div>
+        @endif
         <form class="form" action="/bills/{{ $bill->id }}" method="POST">
             @csrf
             @method('PUT')
@@ -39,9 +44,4 @@
             <button class="btn">Delete</button>
         </form>
     </div>
-
-    <!-- ALERT: make sure this is styled -->
-    @if (Session::has('message'))
-        <div>{{ Session::get('message') }}</div>
-    @endif
 @endsection
