@@ -1,32 +1,46 @@
 @extends('layouts.app')
 
 @section('content')
-    <form action="/bills/{{ $bill->id }}" method="POST">
+    <!-- NOTE: This will be a delete alert dialog that will be triggered when the delete button is clicked. -->
+    <!-- <form action="/bills/{{ $bill->id }}" method="POST">
         @csrf
-        @method('PUT')
-        <label for="name">Name</label>
-        <input type="text" name="name" value="{{ $bill->name }}">
-        <label for="description">Description</label>
-        <textarea name="description">{{ $bill->description }}</textarea>
-        <label for="amount">Amount</label>
-        <input type="numeric" name="amount" value="{{ $bill->amount }}">
-        <label for="due_date">Due Date</label>
-        <select name="due_date">
-            @for ($i = 1; $i <= 31; $i++) 
-                <option @if ($bill->due_date === $i) selected @endif>{{ $i }}</option> 
-            @endfor
-        </select>
-        <label for="autopay">Autopay</label>
-        <input type="checkbox" name="autopay" id="autopay" value="1" @if ($bill->autopay == 1) checked @endif>
-        <input type="submit" value="Save">
-
-        <form action="/bills/{{ $bill->id }}" method="POST">
+        @method('DELETE')
+        <input class="btn" type="submit" value="Delete">
+    </form> -->
+    <div class="form-container">
+        <form class="form" action="/bills/{{ $bill->id }}" method="POST">
             @csrf
-            @method('DELETE')
-            <input type="submit" value="Delete">
+            @method('PUT')
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" value="{{ $bill->name }}">
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea name="description">{{ $bill->description }}</textarea>
+            </div>
+            <div class="form-group">
+                <label for="amount">Amount</label>
+                <input type="text" name="amount" value="{{ $bill->amount }}">
+            </div>
+            <div class="form-group">
+                <label for="due_date">Due Date</label>
+                <select name="due_date">
+                    @for ($i = 1; $i <= 31; $i++) 
+                        <option @if ($bill->due_date === $i) selected @endif>{{ $i }}</option> 
+                    @endfor
+                </select>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" name="autopay" id="autopay" value="1" @if ($bill->autopay == 1) checked @endif>
+                <label for="autopay">Autopay</label>
+            </div>
+            <input class="btn" type="submit" value="Save">
+            <button class="btn">Delete</button>
         </form>
-    </form>
+    </div>
 
+    <!-- ALERT: make sure this is styled -->
     @if (Session::has('message'))
         <div>{{ Session::get('message') }}</div>
     @endif

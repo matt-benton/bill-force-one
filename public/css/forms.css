@@ -33,7 +33,7 @@
     margin-right: var(--spacing-small);
 }
 
-input {
+input[type=text] {
     padding: var(--spacing-medium);
     border: 0;
     border-bottom: 2px solid var(--color-grey-dark-1);

@@ -14,7 +14,7 @@
             </div>
             <div class="form-group">
                 <label for="amount">Amount</label>
-                <input type="numeric" name="amount">
+                <input type="text" name="amount">
             </div>
             <div class="form-group">
                 <label for="due_date">Due Date</label>
