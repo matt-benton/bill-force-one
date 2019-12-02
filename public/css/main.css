@@ -62,7 +62,7 @@ ul {
 
     .container {
         grid-template-columns: 1fr;
-        grid-template-rows: auto 3fr;
+        grid-template-rows: auto auto 1fr;
     }
 
     nav {
