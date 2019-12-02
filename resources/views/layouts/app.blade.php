@@ -11,6 +11,7 @@
         <div class="container">
             <nav>
                 <ul class="side-nav">
+                    <a href="/"><li>Bill Force One</li></a>
                     <a href="/bills" @if (Request::path() === 'bills') class="active" @endif>
                         <li>
                             <?xml version="1.0" encoding="UTF-8"?>

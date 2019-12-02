@@ -6,13 +6,15 @@
     align-items: center;
 }
 
+.side-nav a:first-child {
+    font-size: var(--font-medium);
+    color: var(--color-white);
+    border-bottom: .5px solid var(--color-grey-light-5);
+}
+
 .side-nav a {
     padding: var(--spacing-medium);
     width: 100%;
-}
-
-.side-nav a:hover {
-    background-color: var(--color-grey-dark-5);
 }
 
 .side-nav li {
