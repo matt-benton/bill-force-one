@@ -30,6 +30,11 @@ body {
     grid-template-rows: auto 3fr;
 }
 
+nav {
+    grid-row: span 2;
+    font-size: var(--font-small);
+}
+
 a {
     text-decoration: none;
 }
@@ -53,6 +58,15 @@ ul {
 @media (max-width: 768px) {
     html {
         font-size: 52%;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 3fr;
+    }
+
+    nav {
+        grid-row: span 1;
     }
 }
 

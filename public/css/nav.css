@@ -1,8 +1,3 @@
-nav {
-    grid-row: span 2;
-    font-size: var(--font-small);
-}
-
 .side-nav {
     background-color: var(--color-grey-dark-1);
     height: 100%;
