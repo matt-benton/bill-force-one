@@ -1,5 +1,5 @@
 .side-nav {
-    background-color: var(--color-grey-dark-1);
+    background-color: var(--color-grey-light-2);
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -8,13 +8,21 @@
 
 .side-nav a:first-child {
     font-size: var(--font-medium);
-    color: var(--color-white);
+    color: var(--color-grey-dark-1);
     border-bottom: .5px solid var(--color-grey-light-5);
+    display: flex;
+    justify-content: center;
+    padding: var(--spacing-large);
 }
 
 .side-nav a {
+    color: var(--color-grey-dark-1);
     padding: var(--spacing-medium);
     width: 100%;
+}
+
+.side-nav a:hover {
+    background-color: var(--color-grey-light-3);
 }
 
 .side-nav li {
@@ -22,12 +30,12 @@
 }
 
 .active {
-    background-color: var(--color-grey-dark-3);
+    border-left: 3px solid var(--color-grey-dark-1);
 }
 
 .icon {
     width: var(--font-large);
     height: var(--font-large);
-    fill: var(--color-white);
-    margin-right: var(--spacing-small);
+    fill: var(--color-grey-dark-1);
+    margin-right: var(--spacing-medium);
 }
