@@ -12,5 +12,3 @@ const hideDeleteBillDialog = function () {
 
 showDeleteDialogButton.addEventListener('click', showDeleteBillDialog);
 hideDeleteDialogButton.addEventListener('click', hideDeleteBillDialog);
-
-

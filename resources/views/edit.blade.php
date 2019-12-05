@@ -52,5 +52,5 @@
 @endsection
 
 @section('scripts')
-    <script src="{{ url('/js/app.js') }}"></script>
+    <script src="{{ url('/js/delete-dialog.js') }}"></script>
 @endsection

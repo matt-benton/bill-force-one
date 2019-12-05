@@ -13,15 +13,14 @@
     </div>
     <div class="row">
         <div class="bills-order-container">
-            <form action="/bills" method="GET">
+            <form action="/bills" method="GET" class="bills-order-form">
                 <select class="bills-order-select" name="order">
-                    <option selected disabled value="">Select Order</option>
+                    <option selected disabled value="">Sort By</option>
                     <option value="name">Name</option>
                     <option value="amount">Amount</option>
                     <option value="due_date">Due Date</option>
                     <option value="paid">Paid Status</option>
                 </select>
-                <input type="submit" value="doot"s>
             </form>
         </div>
         <div class="bills-list">
@@ -30,4 +29,8 @@
             @endforeach
         </div>
     </div>
+@endsection
+
+@section('scripts')
+    <script src="{{ url('/js/order-by-select.js') }}"></script>
 @endsection
