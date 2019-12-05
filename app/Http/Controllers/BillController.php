@@ -13,9 +13,19 @@ class BillController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $bills = Bill::all();
+        $order = 'name';
+        if ($request->has('order')) {
+            $order = $request->order;
+        }
+
+        $orderOptions = ['name', 'amount', 'due_date', 'paid'];
+        if (!in_array($order, $orderOptions)) {
+            abort(404);
+        }
+
+        $bills = Bill::orderBy($order)->get();
         $now = Carbon::now();
 
         $sumOfAllBills = 0;

@@ -2,8 +2,12 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: var(--spacing-large);
-    margin-left: var(--spacing-large);
-    margin-right: var(--spacing-large);
+}
+
+.bills-order-container {
+    display: flex;
+    justify-content: end;
+    margin-bottom: var(--spacing-small);
 }
 
 .bills-card {

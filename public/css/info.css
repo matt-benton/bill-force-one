@@ -1,7 +1,6 @@
 .main-info-panel {
     background-color: var(--color-white);
     color: var(--color-grey-dark-1);
-    margin: var(--spacing-large);
     display: flex;
     justify-content: space-around;
     align-items: center;
