@@ -38,7 +38,7 @@
 input[type=text] {
     padding: var(--spacing-medium);
     border: 0;
-    border-bottom: 2px solid var(--color-grey-dark-1);
+    border-bottom: 2px solid var(--color-primary-dark-3);
     border-radius: 0;
     background-color: var(--color-grey-light-2);
     font-size: var(--font-medium);

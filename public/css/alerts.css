@@ -1,9 +1,17 @@
 .alert {
-    background-color: var(--color-grey-light-3);
+    background-color: var(--color-grey-light-2);
     width: 100%;
     padding: var(--spacing-large);
     border-left: 3px solid var(--color-grey-dark-1);
     font-size: var(--font-small);
+}
+
+.alert-primary {
+    border-left: 3px solid var(--color-primary-dark-3);
+}
+
+.alert-danger {
+    border-left: 3px solid var(--color-red);
 }
 
 .alert-buttons {

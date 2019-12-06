@@ -4,6 +4,7 @@
     font-size: var(--font-medium);
     border-radius: 0;
     display: inline flex;
+    cursor: pointer;
 }
 
 .btn-primary {
@@ -11,7 +12,33 @@
     color: var(--color-white);
 }
 
+.btn-primary:hover {
+    background-color: var(--color-primary-dark-4);
+}
+
 .btn-success {
     background-color: var(--color-green);
     color: var(--color-white);
+}
+
+.btn-success:hover {
+    background-color: var(--color-green-dark);
+}
+
+.btn-danger {
+    background-color: var(--color-red);
+    color: var(--color-white);
+}
+
+.btn-danger:hover {
+    background-color: var(--color-red-dark);
+}
+
+.btn-secondary {
+    background-color: var(--color-grey-light-5);
+    color: var(--color-white);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-grey-dark-1);
 }

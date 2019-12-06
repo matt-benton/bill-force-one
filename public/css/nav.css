@@ -22,7 +22,7 @@
 }
 
 .side-nav a:hover {
-    background-color: var(--color-grey-light-3);
+    background-color: var(--color-primary-dark-1);
 }
 
 .side-nav li {
@@ -30,7 +30,7 @@
 }
 
 .active {
-    border-left: 3px solid var(--color-grey-dark-1);
+    border-left: 3px solid var(--color-primary-dark-1);
 }
 
 .icon {

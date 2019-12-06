@@ -3,18 +3,18 @@
 @section('content')
     <div class="form-container">
         @if (Session::has('message'))
-            <div class="alert">
+            <div class="alert alert-primary">
                 {{ Session::get('message') }}
             </div>
         @endif
-        <div class="alert" id="delete-bill-dialog">
+        <div class="alert alert-danger" id="delete-bill-dialog">
             <p>Are you sure you want to delete this bill?</p>
             <div class="alert-buttons">
                 <form action="/bills/{{ $bill->id }}" method="POST">
                     @csrf
                     @method('DELETE')
-                    <input class="btn" type="submit" value="Delete">
-                    <button class="btn" type="button" id="hide-delete-dialog-button">Cancel</button>
+                    <input class="btn btn-danger" type="submit" value="Delete">
+                    <button class="btn btn-secondary" type="button" id="hide-delete-dialog-button">Cancel</button>
                 </form>
             </div>
         </div>
@@ -45,8 +45,8 @@
                 <input type="checkbox" name="autopay" id="autopay" value="1" @if ($bill->autopay == 1) checked @endif>
                 <label for="autopay">Autopay</label>
             </div>
-            <input class="btn" type="submit" value="Save">
-            <button class="btn" type="button" id="show-delete-dialog-button">Delete</button>
+            <input class="btn btn-primary" type="submit" value="Save">
+            <button class="btn btn-secondary" type="button" id="show-delete-dialog-button">Delete</button>
         </form>
     </div>
 @endsection
