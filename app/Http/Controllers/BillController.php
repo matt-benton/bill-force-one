@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Bill;
 use Carbon\Carbon;
+use DB;
 use Illuminate\Http\Request;
 
 class BillController extends Controller
@@ -145,6 +146,13 @@ class BillController extends Controller
         }
 
         $bill->save();
+
+        return back();
+    }
+
+    public function resetAll()
+    {
+        DB::table('bills')->update(['paid' => 0]);
 
         return back();
     }

@@ -12,7 +12,7 @@
         @endcomponent
     </div>
     <div class="row">
-        <div class="bills-order-container">
+        <div class="bills-list-menu">
             <form action="/bills" method="GET" class="bills-order-form">
                 <select class="bills-order-select" name="order">
                     <option selected disabled value="">Sort By</option>
@@ -21,6 +21,9 @@
                     <option value="due_date">Due Date</option>
                     <option value="paid">Paid Status</option>
                 </select>
+            </form>
+            <form action="{{ route('bills.reset') }}" method="GET">
+                <input type="submit" class="btn" value="Reset All">
             </form>
         </div>
         <div class="bills-list">

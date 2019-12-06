@@ -1,6 +1,6 @@
 .btn {
     border: 0;
-    padding: var(--spacing-small) var(--spacing-large);
+    padding: var(--spacing-medium) var(--spacing-larger);
     font-size: var(--font-medium);
     border-radius: 0;
     display: inline flex;

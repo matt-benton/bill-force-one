@@ -4,9 +4,10 @@
     grid-gap: var(--spacing-large);
 }
 
-.bills-order-container {
+.bills-list-menu {
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: var(--spacing-small);
 }
 
@@ -50,12 +51,10 @@
 .warning-icon {
     width: var(--font-small);
     height: var(--font-small);
-    fill: orange;
 }
 
 .paid-icon {
     width: var(--font-large);
     height: var(--font-large);
-    fill: mediumseagreen;
     margin-left: var(--spacing-small);
 }

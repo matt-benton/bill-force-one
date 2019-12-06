@@ -15,5 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('bills/reset', 'BillController@resetAll')->name('bills.reset');
 Route::resource('bills', 'BillController');
 Route::put('bills/{bill}/toggle', 'BillController@togglePaidStatus');
