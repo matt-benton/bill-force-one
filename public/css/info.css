@@ -1,18 +1,19 @@
 .main-info-panel {
-    background-color: var(--color-white);
-    color: var(--color-grey-dark-1);
+    background: linear-gradient(to right, var(--color-grey-dark-2), var(--color-grey-dark-3));
+    color: var(--color-primary-light-1);
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding: var(--spacing-large) var(--spacing-large);
+    box-shadow: 0 8px 5px var(--color-grey-light-3)
 }
 
 .main-info-item {
     width: 100%;
     padding: var(--spacing-medium);
-    border-right: 1px solid var(--color-grey-light-2);
 }
 
 .main-info-item-header {
-    color: var(--color-grey-light-4);
+    color: var(--color-primary-light-2);
     padding-bottom: var(--spacing-small);
 }

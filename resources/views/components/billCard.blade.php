@@ -4,7 +4,7 @@
         <span>${{ $bill->amount }}</span>
     </div>
     <div class="card-body">
-        <p class="text-highlight">Due on the {{ $bill->dueDateWithSuffix() }}
+        <p class="due-text">Due on the {{ $bill->dueDateWithSuffix() }}
             @if ($bill->warning) 
                 <?xml version="1.0" encoding="UTF-8"?>
                 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
@@ -20,7 +20,7 @@
             @csrf
             @method('PUT')
             @if ($bill->paid) 
-                <button class="btn" type="submit">
+                <button class="btn btn-success" type="submit">
                     Paid
                     <?xml version="1.0" encoding="UTF-8"?>
                     <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
@@ -29,7 +29,7 @@
                     </svg>
                 </button>
             @else
-                <input class="btn" type="submit" value="Pay">
+                <input class="btn btn-primary" type="submit" value="Pay">
             @endif
         </form>
         

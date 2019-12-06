@@ -19,6 +19,7 @@
     flex-direction: column;
     justify-content: space-between;
     max-height: 40rem;
+    box-shadow: 0 8px 5px var(--color-grey-light-2);;
 }
 
 .card-header {
@@ -29,7 +30,7 @@
 }
 
 .card-header a {
-    color: var(--color-grey-dark-3);
+    color: var(--color-primary-dark-3);
 }
 
 .card-body {
@@ -39,6 +40,11 @@
     flex-direction: column;
     justify-content: space-between;
     font-size: var(--font-smaller);
+}
+
+.due-text {
+    font-size: var(--font-medium);
+    padding-bottom: var(--spacing-medium);
 }
 
 .card-footer {
@@ -51,10 +57,12 @@
 .warning-icon {
     width: var(--font-small);
     height: var(--font-small);
+    fill: var(--color-red);
 }
 
 .paid-icon {
     width: var(--font-large);
     height: var(--font-large);
     margin-left: var(--spacing-small);
+    fill: var(--color-white);
 }

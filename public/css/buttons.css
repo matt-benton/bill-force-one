@@ -5,3 +5,13 @@
     border-radius: 0;
     display: inline flex;
 }
+
+.btn-primary {
+    background-color: var(--color-primary-dark-3);
+    color: var(--color-white);
+}
+
+.btn-success {
+    background-color: var(--color-green);
+    color: var(--color-white);
+}
