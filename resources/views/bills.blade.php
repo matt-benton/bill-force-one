@@ -23,7 +23,7 @@
                 </select>
             </form>
             <form action="{{ route('bills.reset') }}" method="GET">
-                <input type="submit" class="btn btn-secondary" value="Reset All">
+                <button class="btn btn-secondary" type="submit">Reset All</button>
             </form>
         </div>
         <div class="bills-list">

@@ -29,7 +29,7 @@
                     </svg>
                 </button>
             @else
-                <input class="btn btn-primary" type="submit" value="Pay">
+                <button class="btn btn-primary" type="submit">Pay</button>
             @endif
         </form>
         

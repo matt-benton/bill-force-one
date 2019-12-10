@@ -26,7 +26,7 @@
                 <input type="checkbox" name="autopay" id="autopay" value="1">
                 <label for="autopay">Autopay</label>
             </div>
-            <input type="submit" value="Create Bill" class="btn btn-primary">
+            <button class="btn btn-primary" type="submit">Create Bill</button>
         </form>
     </div>
 @endsection

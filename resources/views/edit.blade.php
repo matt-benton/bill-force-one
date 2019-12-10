@@ -13,7 +13,7 @@
                 <form action="/bills/{{ $bill->id }}" method="POST">
                     @csrf
                     @method('DELETE')
-                    <input class="btn btn-danger" type="submit" value="Delete">
+                    <button class="btn btn-danger" type="submit">Delete</button>
                     <button class="btn btn-secondary" type="button" id="hide-delete-dialog-button">Cancel</button>
                 </form>
             </div>
@@ -45,7 +45,7 @@
                 <input type="checkbox" name="autopay" id="autopay" value="1" @if ($bill->autopay == 1) checked @endif>
                 <label for="autopay">Autopay</label>
             </div>
-            <input class="btn btn-primary" type="submit" value="Save">
+            <button class="btn btn-primary" type="submit">Save</button>
             <button class="btn btn-secondary" type="button" id="show-delete-dialog-button">Delete</button>
         </form>
     </div>
