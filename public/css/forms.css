@@ -1,11 +1,8 @@
 .form-container {
-    display: grid;
-    grid-template-columns: 50rem;
-    grid-template-rows: auto auto;
-    grid-row-gap: var(--spacing-large);
-    justify-content: center;
     width: 100%;
-    margin: var(--spacing-large);
+    margin-top: var(--spacing-large);
+    display: flex;
+    justify-content: center;
 }
 
 .form {
