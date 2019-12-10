@@ -9,6 +9,7 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: var(--spacing-small);
+    font-size: var(--font-medium);
 }
 
 .bills-card {

@@ -4,7 +4,7 @@
     <div class="row">
         @component('components.mainInfoPanel', 
             [
-                'date' => $formattedDate,
+            'date' => $formattedDate,
                 'sumOfAllBills' => $sumOfAllBills,
                 'sumOfUnpaidBills' => $sumOfUnpaidBills,
             ]
@@ -14,12 +14,12 @@
     <div class="row">
         <div class="bills-list-menu">
             <form action="/bills" method="GET" class="bills-order-form">
-                <select class="bills-order-select" name="order">
-                    <option selected disabled value="">Sort By</option>
-                    <option value="name">Name</option>
-                    <option value="amount">Amount</option>
-                    <option value="due_date">Due Date</option>
-                    <option value="paid">Paid Status</option>
+                <label for="bills-order-select">Order By</label>
+                <select class="bills-order-select" id="bills-order-select" name="order">
+                    <option value="name" @if ($order === 'name') selected @endif>Name</option>
+                    <option value="amount" @if ($order === 'amount') selected @endif>Amount</option>
+                    <option value="due_date" @if ($order === 'due_date') selected @endif>Due Date</option>
+                    <option value="paid" @if ($order === 'paid') selected @endif>Paid Status</option>
                 </select>
             </form>
             <form action="{{ route('bills.reset') }}" method="GET">

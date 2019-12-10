@@ -46,6 +46,7 @@ class BillController extends Controller
             'formattedDate' => $now->toFormattedDateString(),
             'sumOfAllBills' => number_format($sumOfAllBills, 2),
             'sumOfUnpaidBills' => number_format($sumOfUnpaidBills, 2),
+            'order' => $order,
         ]);
     }
 
