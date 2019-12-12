@@ -1,7 +1,8 @@
 .alert {
     background-color: var(--color-grey-light-2);
-    width: 100%;
+    width: 50rem;
     padding: var(--spacing-large);
+    margin: var(--spacing-large) auto;
     border-left: 3px solid var(--color-grey-dark-1);
     font-size: var(--font-small);
 }
