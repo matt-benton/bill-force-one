@@ -1,6 +1,7 @@
 nav {
-    background-color: var(--color-grey-dark-2);
+    background-color: var(--color-grey-dark-3);
     height: 100%;
+    box-shadow: 0 8px 5px var(--color-grey-light-4);
 }
 
 .side-nav {

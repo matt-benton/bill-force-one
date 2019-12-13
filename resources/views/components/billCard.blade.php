@@ -33,6 +33,6 @@
             @endif
         </form>
         
-        @if ($bill->autopay) <p class="text-highlight">autopay on</p> @endif
+        @if ($bill->autopay) <p class="autopay-text">autopay on</p> @endif
     </div>
 </div>

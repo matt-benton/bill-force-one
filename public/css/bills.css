@@ -67,3 +67,7 @@
     margin-left: var(--spacing-small);
     fill: var(--color-white);
 }
+
+.autopay-text {
+    font-size: var(--font-smaller);
+}
