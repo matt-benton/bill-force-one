@@ -100,10 +100,11 @@ class BillController extends Controller
      * @param  \App\Bill  $bill
      * @return \Illuminate\Http\Response
      */
-    public function edit(Bill $bill)
+    public function edit($accountId, Bill $bill)
     {
         return view('bills/edit', [
             'bill' => $bill,
+            'accounts' => Account::all(),
         ]);
     }
 
@@ -114,13 +115,14 @@ class BillController extends Controller
      * @param  \App\Bill  $bill
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Bill $bill)
+    public function update(Request $request, $accountId, Bill $bill)
     {
         $bill->name = $request->name;
         $bill->description = $request->description;
         $bill->amount = $request->amount;
         $bill->due_date = $request->due_date;
         $bill->autopay = $request->autopay ? $request->autopay : 0;
+        $bill->account_id = $request->account;
         $bill->save();
 
         return back()->with([

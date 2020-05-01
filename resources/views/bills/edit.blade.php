@@ -10,7 +10,7 @@
         <div class="alert alert-danger" id="delete-bill-dialog">
             <p>Are you sure you want to delete this bill?</p>
             <div class="alert-buttons">
-                <form action="/bills/{{ $bill->id }}" method="POST">
+                <form action="/accounts/{{ $bill->account_id }}/bills/{{ $bill->id }}" method="POST">
                     @csrf
                     @method('DELETE')
                     <button class="btn btn-danger" type="submit">Delete</button>
@@ -18,7 +18,7 @@
                 </form>
             </div>
         </div>
-        <form class="form" action="/bills/{{ $bill->id }}" method="POST">
+        <form class="form" action="/accounts/{{ $bill->account_id }}/bills/{{ $bill->id }}" method="POST">
             @csrf
             @method('PUT')
             <div class="form-group">
@@ -39,6 +39,14 @@
                     @for ($i = 1; $i <= 31; $i++) 
                         <option @if ($bill->due_date === $i) selected @endif>{{ $i }}</option> 
                     @endfor
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="account">Account</label>
+                <select name="account" id="account">
+                    @foreach ($accounts as $account)
+                        <option @if ($bill->account_id === $account->id) selected @endif value="{{ $account->id }}">{{ $account->name }}</option>
+                    @endforeach
                 </select>
             </div>
             <div class="form-check">
