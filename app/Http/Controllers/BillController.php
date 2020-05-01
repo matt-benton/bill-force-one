@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Account;
 use App\Bill;
 use Carbon\Carbon;
 use DB;
@@ -14,8 +15,10 @@ class BillController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index(Request $request, $accountId)
     {
+        $account = Account::findOrFail($accountId);
+
         $order = 'name';
         if ($request->has('order')) {
             $order = $request->order;
@@ -26,7 +29,7 @@ class BillController extends Controller
             abort(404);
         }
 
-        $bills = Bill::orderBy($order)->get();
+        $bills = Bill::where('account_id', $accountId)->orderBy($order)->get();
         $now = Carbon::now();
 
         $sumOfAllBills = 0;
@@ -41,12 +44,13 @@ class BillController extends Controller
             }
         }
 
-        return view('bills', [
+        return view('bills/bills', [
             'bills' => $bills,
             'formattedDate' => $now->toFormattedDateString(),
             'sumOfAllBills' => number_format($sumOfAllBills, 2),
             'sumOfUnpaidBills' => number_format($sumOfUnpaidBills, 2),
             'order' => $order,
+            'account' => $account,
         ]);
     }
 
@@ -57,7 +61,7 @@ class BillController extends Controller
      */
     public function create()
     {
-        return view('create');
+        return view('bills/create');
     }
 
     /**
@@ -98,7 +102,7 @@ class BillController extends Controller
      */
     public function edit(Bill $bill)
     {
-        return view('edit', [
+        return view('bills/edit', [
             'bill' => $bill,
         ]);
     }

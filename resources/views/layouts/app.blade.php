@@ -37,6 +37,12 @@
                             <h3>New Bill</h3>
                         </li>
                     </a>
+                    <a href="/accounts">
+                        <li><h3>Accounts</h3></li>
+                    </a>
+                    <a href="/accounts/create">
+                        <li><h3>New Account</h3></li>
+                    </a>
                 </ul>
             </nav>
             @yield('content')

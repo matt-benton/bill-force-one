@@ -4,9 +4,10 @@
     <div class="row">
         @component('components.mainInfoPanel', 
             [
-            'date' => $formattedDate,
+                'date' => $formattedDate,
                 'sumOfAllBills' => $sumOfAllBills,
                 'sumOfUnpaidBills' => $sumOfUnpaidBills,
+                'account' => $account
             ]
         )
         @endcomponent
@@ -22,7 +23,7 @@
                     <option value="paid" @if ($order === 'paid') selected @endif>Paid Status</option>
                 </select>
             </form>
-            <form action="{{ route('bills.reset') }}" method="GET">
+            <form action="" method="GET">
                 <button class="btn btn-secondary" type="submit">Reset All</button>
             </form>
         </div>
