@@ -138,11 +138,11 @@ class BillController extends Controller
      * @param  \App\Bill  $bill
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Bill $bill)
+    public function destroy($accountId, Bill $bill)
     {
         $bill->delete();
 
-        return redirect('/bills');
+        return redirect("/accounts/{$accountId}/bills");
     }
 
     public function togglePaidStatus(Bill $bill)
