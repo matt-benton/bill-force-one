@@ -23,9 +23,14 @@
                     <option value="paid" @if ($order === 'paid') selected @endif>Paid Status</option>
                 </select>
             </form>
-            <form action="" method="GET">
-                <button class="btn btn-secondary" type="submit">Reset All</button>
-            </form>
+            <div class="bills-list-menu-right">
+                <a href="/accounts/{{ $account->id }}/bills/create">
+                    <button class="btn btn-secondary">New Bill</button>
+                </a>
+                <form action="" method="GET">
+                    <button class="btn btn-secondary" type="submit">Reset All</button>
+                </form>
+            </div>
         </div>
         <div class="bills-list">
             @foreach ($bills as $bill)

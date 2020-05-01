@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="form-container">
-        <form class="form" action="/bills" method="POST">
+        <form class="form" action="/accounts/{{ $accountId }}/bills" method="POST">
             @csrf
             <div class="form-group">
                 <label for="name">Name</label>

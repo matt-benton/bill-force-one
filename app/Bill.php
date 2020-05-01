@@ -13,6 +13,7 @@ class Bill extends Model
         'amount',
         'due_date',
         'autopay',
+        'account_id',
     ];
 
     public function account()

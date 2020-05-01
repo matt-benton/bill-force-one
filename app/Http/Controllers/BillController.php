@@ -59,9 +59,9 @@ class BillController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($accountId)
     {
-        return view('bills/create');
+        return view('bills/create')->with(['accountId' => $accountId]);
     }
 
     /**
@@ -70,7 +70,7 @@ class BillController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $accountId)
     {
         Bill::create([
             'name' => $request->name,
@@ -78,9 +78,10 @@ class BillController extends Controller
             'amount' => $request->amount,
             'due_date' => $request->due_date,
             'autopay' => $request->autopay ? $request->autopay : 0,
+            'account_id' => $accountId,
         ]);
 
-        return redirect('/bills');
+        return redirect("/accounts/{$accountId}/bills");
     }
 
     /**

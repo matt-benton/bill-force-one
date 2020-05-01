@@ -12,6 +12,10 @@
     font-size: var(--font-medium);
 }
 
+.bills-list-menu-right {
+    display: flex;
+}
+
 .bills-card {
     padding: var(--spacing-large);
     background-color: var(--color-white);
@@ -20,7 +24,7 @@
     flex-direction: column;
     justify-content: space-between;
     max-height: 40rem;
-    box-shadow: 0 8px 5px var(--color-grey-light-2);;
+    box-shadow: 0 8px 5px var(--color-grey-light-2);
 }
 
 .card-header {
