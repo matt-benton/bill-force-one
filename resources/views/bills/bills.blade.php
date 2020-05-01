@@ -14,7 +14,7 @@
     </div>
     <div class="row">
         <div class="bills-list-menu">
-            <form action="/bills" method="GET" class="bills-order-form">
+            <form action="/accounts/{{ $account->id }}/bills" method="GET" class="bills-order-form">
                 <label for="bills-order-select">Order By</label>
                 <select class="bills-order-select" id="bills-order-select" name="order">
                     <option value="name" @if ($order === 'name') selected @endif>Name</option>
