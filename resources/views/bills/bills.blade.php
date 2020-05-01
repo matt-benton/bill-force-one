@@ -27,7 +27,7 @@
                 <a href="/accounts/{{ $account->id }}/bills/create">
                     <button class="btn btn-secondary">New Bill</button>
                 </a>
-                <form action="" method="GET">
+                <form action="/accounts/{{ $account->id }}/bills/reset" method="GET">
                     <button class="btn btn-secondary" type="submit">Reset All</button>
                 </form>
             </div>
