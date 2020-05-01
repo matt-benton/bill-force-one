@@ -15,6 +15,11 @@ class Bill extends Model
         'autopay',
     ];
 
+    public function account()
+    {
+        return $this->belongsTo('App/Account');
+    }
+
     public function setAmountAttribute($value)
     {
         $this->attributes['amount'] = $value * 100;
