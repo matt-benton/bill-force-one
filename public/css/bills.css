@@ -16,6 +16,10 @@
     display: flex;
 }
 
+.bills-list-menu-right form {
+    margin-left: var(--spacing-small);
+}
+
 .bills-card {
     padding: var(--spacing-large);
     background-color: var(--color-white);

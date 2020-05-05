@@ -5,6 +5,7 @@
     border-radius: 0;
     display: inline flex;
     cursor: pointer;
+    box-shadow: 0 2px 3px var(--color-grey-dark-1);
 }
 
 .btn-primary {
