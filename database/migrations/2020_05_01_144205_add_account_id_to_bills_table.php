@@ -14,7 +14,7 @@ class AddAccountIdToBillsTable extends Migration
     public function up()
     {
         Schema::table('bills', function (Blueprint $table) {
-            $table->integer('account_id')->after('autopay');
+            $table->bigInteger('account_id')->unsigned()->after('autopay');
 
             $table->foreign('account_id')->references('id')->on('accounts')->onDelete('cascade');
         });
