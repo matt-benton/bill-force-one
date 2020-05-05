@@ -145,7 +145,7 @@ class BillController extends Controller
         return redirect("/accounts/{$accountId}/bills");
     }
 
-    public function togglePaidStatus(Bill $bill)
+    public function togglePaidStatus($accountId, Bill $bill)
     {
         if ($bill->paid === 0) {
             $bill->paid = 1;

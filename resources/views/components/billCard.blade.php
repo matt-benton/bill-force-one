@@ -15,7 +15,7 @@
         <p>{{ $bill->description }}</p>
     </div>
     <div class="card-footer">
-        <form action="/bills/{{ $bill->id }}/toggle" method="POST">
+        <form action="/accounts/{{ $bill->account_id }}/bills/{{ $bill->id }}/toggle" method="POST">
             @csrf
             @method('PUT')
             @if ($bill->paid) 
