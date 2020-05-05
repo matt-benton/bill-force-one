@@ -1,12 +1,13 @@
-@import "variables.css";
-@import "nav.css";
-@import "bills.css";
-@import "buttons.css";
-@import "forms.css";
-@import "info.css";
-@import "alerts.css";
-@import "text.css";
-@import "welcome.css";
+@import 'variables.css';
+@import 'nav.css';
+@import 'bills.css';
+@import 'buttons.css';
+@import 'forms.css';
+@import 'info.css';
+@import 'alerts.css';
+@import 'text.css';
+@import 'welcome.css';
+@import 'accounts.css';
 
 * {
     margin: 0;

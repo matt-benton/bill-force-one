@@ -1,0 +1,21 @@
+.accounts-list {
+    margin: var(--spacing-medium) var(--spacing-large);
+}
+
+.account-card {
+    background-color: #fff;
+    border: 1px solid var(--color-grey-light-3);
+    font-size: var(--font-medium);
+    padding: var(--spacing-large);
+    margin-bottom: var(--spacing-medium);
+    border-radius: 5px;
+}
+
+.account-card h3 {
+    color: var(--color-primary-dark-3);
+    margin-bottom: var(--spacing-medium);
+}
+
+.account-card p {
+    color: var(--color-grey-dark-3);
+}

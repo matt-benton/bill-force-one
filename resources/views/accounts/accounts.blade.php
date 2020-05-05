@@ -1,12 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-
-    @foreach($accounts as $account)
-        <div>
-            <a href="/accounts/{{ $account->id }}/bills"><h3>{{ $account->name }}</h3></a>
-            <p>{{ $account->description }}</p>
-        </div>
-    @endforeach
-
+    <div class="accounts-list">
+        @foreach($accounts as $account)
+            <a href="/accounts/{{ $account->id }}/bills">
+                <div class="account-card">
+                    <h3>{{ $account->name }}</h3>
+                    <p>{{ $account->description }}</p>
+                </div>
+            </a>
+        @endforeach
+    </div>
 @endsection
