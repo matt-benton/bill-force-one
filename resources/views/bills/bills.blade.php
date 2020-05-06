@@ -15,6 +15,11 @@
     <div class="row">
         <div class="bills-list-menu">
             <form action="/accounts/{{ $account->id }}/bills" method="GET" class="bills-order-form">
+                <select class="bills-filter-select" id="bills-filter-select" name="filter">
+                    <option value="month" @if ($filter === 'month') selected @endif>Due This Month</option>
+                    <option value="all" @if ($filter === 'all') selected @endif>All Bills</option>
+                    <option value="yearly" @if ($filter === 'yearly') selected @endif>All Yearly Bills</option>
+                </select>
                 <label for="bills-order-select">Order By</label>
                 <select class="bills-order-select" id="bills-order-select" name="order">
                     <option value="name" @if ($order === 'name') selected @endif>Name</option>

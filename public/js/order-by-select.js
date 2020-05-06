@@ -1,6 +1,5 @@
-const form = document.querySelector('.bills-order-form');
-const select = document.querySelector('.bills-order-select');
+const form = document.querySelector('.bills-order-form')
 
-select.addEventListener('change', function () {
-    form.submit();
-});
+form.addEventListener('change', function () {
+    form.submit()
+})

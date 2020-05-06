@@ -19,23 +19,46 @@ class BillController extends Controller
     {
         $account = Account::findOrFail($accountId);
 
-        $order = 'name';
+        $filter = 'month';
+        if ($request->has('filter')) {
+            $filter = $request->filter;
+        }
+
+        $order = 'due_date';
         if ($request->has('order')) {
             $order = $request->order;
         }
 
+        $filterOptions = ['all', 'yearly', 'month'];
         $orderOptions = ['name', 'amount', 'due_date', 'paid'];
-        if (!in_array($order, $orderOptions)) {
+        if (!in_array($order, $orderOptions) || !in_array($filter, $filterOptions)) {
             abort(404);
         }
 
-        $bills = Bill::where('account_id', $accountId)->orderBy($order)->get();
         $now = Carbon::now();
+
+        switch ($filter) {
+            case 'all':
+                $bills = Bill::where('account_id', $accountId)->get();
+                break;
+            case 'month':
+                $bills = Bill::where('account_id', $accountId)
+                    ->where('due_month', $now->month)
+                    ->orWhere('due_month', 0)
+                    ->get();
+                break;
+            case 'yearly':
+                $bills = Bill::where('account_id', $accountId)
+                    ->where('due_month', '!=', 0)->get();
+                break;
+        }
+
+        $orderedBills = $bills->sortBy($order);
 
         $sumOfAllBills = 0;
         $sumOfUnpaidBills = 0;
 
-        foreach ($bills as $bill) {
+        foreach ($orderedBills as $bill) {
             $this->setWarningStatus($bill);
             $sumOfAllBills += $bill->amount;
 
@@ -45,11 +68,12 @@ class BillController extends Controller
         }
 
         return view('bills/bills', [
-            'bills' => $bills,
+            'bills' => $orderedBills,
             'formattedDate' => $now->toFormattedDateString(),
             'sumOfAllBills' => number_format($sumOfAllBills, 2),
             'sumOfUnpaidBills' => number_format($sumOfUnpaidBills, 2),
             'order' => $order,
+            'filter' => $filter,
             'account' => $account,
         ]);
     }
