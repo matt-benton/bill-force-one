@@ -77,6 +77,7 @@ class BillController extends Controller
             'description' => $request->description,
             'amount' => $request->amount,
             'due_date' => $request->due_date,
+            'due_month' => $request->due_month,
             'autopay' => $request->autopay ? $request->autopay : 0,
             'account_id' => $accountId,
         ]);
@@ -122,6 +123,7 @@ class BillController extends Controller
         $bill->description = $request->description;
         $bill->amount = $request->amount;
         $bill->due_date = $request->due_date;
+        $bill->due_month = $request->due_month;
         $bill->autopay = $request->autopay ? $request->autopay : 0;
         $bill->account_id = $request->account;
         $bill->save();

@@ -42,6 +42,24 @@
                 </select>
             </div>
             <div class="form-group">
+                <label for="due_month">Due Month (if bill is yearly)</label>
+                <select name="due_month">
+                    <option value="0" @if ($bill->due_month === 0) selected @endif>All (bill is paid monthly)</option>
+                    <option value="1" @if ($bill->due_month === 1) selected @endif>January</option>
+                    <option value="2" @if ($bill->due_month === 2) selected @endif>February</option>
+                    <option value="3" @if ($bill->due_month === 3) selected @endif>March</option>
+                    <option value="4" @if ($bill->due_month === 4) selected @endif>April</option>
+                    <option value="5" @if ($bill->due_month === 5) selected @endif>May</option>
+                    <option value="6" @if ($bill->due_month === 6) selected @endif>June</option>
+                    <option value="7" @if ($bill->due_month === 7) selected @endif>July</option>
+                    <option value="8" @if ($bill->due_month === 8) selected @endif>August</option>
+                    <option value="9" @if ($bill->due_month === 9) selected @endif>September</option>
+                    <option value="10" @if ($bill->due_month === 10) selected @endif>October</option>
+                    <option value="11" @if ($bill->due_month === 11) selected @endif>November</option>
+                    <option value="12" @if ($bill->due_month === 12) selected @endif>December</option>
+                </select>
+            </div>
+            <div class="form-group">
                 <label for="account">Account</label>
                 <select name="account" id="account">
                     @foreach ($accounts as $account)

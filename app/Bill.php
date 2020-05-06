@@ -12,6 +12,7 @@ class Bill extends Model
         'description',
         'amount',
         'due_date',
+        'due_month',
         'autopay',
         'account_id',
     ];
