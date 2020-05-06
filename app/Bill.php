@@ -46,14 +46,36 @@ class Bill extends Model
     {
         $now = Carbon::now();
 
-        return $now->day > $this->attributes['due_date'] && $this->isDue();
+        if ($this->isDue()) {
+            $now = Carbon::now();
+
+            if ($this->attributes['due_month'] === 0) {
+                // today's date is after the due date
+                return $now->day > $this->attributes['due_date'];
+            } else {
+                /**
+                 * This month is after the due month
+                 * or this month is the same as the due month and today's date is past the due date
+                 */
+                return $now->month > $this->attributes['due_month'] 
+                    || $now->month === $this->attributes['due_month'] && $now->day > $this->attributes['due_date'];
+            }
+        }
     }
 
     public function isDueToday()
     {
-        $now = Carbon::now();
+        if ($this->isDue()) {
+            $now = Carbon::now();
 
-        return $now->day === $this->attributes['due_date'] && $this->isDue();
+            if ($this->attributes['due_month'] === 0) {
+                // today's date is the due date
+                return $now->day === $this->attributes['due_date'];
+            } else {
+                // today's date is the due date and the current month is the due month
+                return $now->month === $this->attributes['due_month'] && $now->day === $this->attributes['due_date'];   
+            }
+        }
     }
 
     public function dueDateWithSuffix()
