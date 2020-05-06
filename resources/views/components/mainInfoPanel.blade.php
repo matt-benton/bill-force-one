@@ -8,7 +8,7 @@
         <h1>{{ $date }}</h1>
     </div>
     <div class="main-info-item">
-        <h3 class="main-info-item-header">Monthly Total</h3>
+        <h3 class="main-info-item-header">Total</h3>
         <h1>${{ $sumOfAllBills }}</h1>
     </div>
     <div class="main-info-item">
