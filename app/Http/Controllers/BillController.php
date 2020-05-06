@@ -44,7 +44,10 @@ class BillController extends Controller
             case 'month':
                 $bills = Bill::where('account_id', $accountId)
                     ->where('due_month', $now->month)
-                    ->orWhere('due_month', 0)
+                    ->orWhere(function ($query) use ($accountId) {
+                        $query->where('due_month', 0)
+                              ->where('account_id', $accountId);
+                    })
                     ->get();
                 break;
             case 'yearly':
