@@ -13,8 +13,8 @@
                 <h1 class="main-heading">Bill Force One</h1>
                 <h3 class="sub-heading">Track Your Monthly Expenses: Know What's Due And When</h3>
                 <ul class="welcome-menu">
-                    <li class="welcome-menu-item"><a href="/bills"><button class="btn btn-secondary">My Bills</button></a></li>
-                    <li class="welcome-menu-item"><a href="/bills/create"><button class="btn btn-secondary">New Bill</button></a></li>
+                    <li class="welcome-menu-item"><a href="/accounts"><button class="btn btn-secondary">Accounts</button></a></li>
+                    <li class="welcome-menu-item"><a href="/accounts/create"><button class="btn btn-secondary">New Account</button></a></li>
                 </ul>
             </div>
         </div>
