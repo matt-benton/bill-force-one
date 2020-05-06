@@ -33,7 +33,7 @@
                     <button class="btn btn-secondary">New Bill</button>
                 </a>
                 <form action="/accounts/{{ $account->id }}/bills/reset" method="GET">
-                    <button class="btn btn-secondary" type="submit">Reset All</button>
+                    <button class="btn btn-secondary" type="submit">Reset Monthly Bills</button>
                 </form>
             </div>
         </div>

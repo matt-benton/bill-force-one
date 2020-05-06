@@ -187,9 +187,12 @@ class BillController extends Controller
         return back();
     }
 
-    public function resetAll()
+    public function resetMonthlyBills($accountId)
     {
-        DB::table('bills')->update(['paid' => 0]);
+        DB::table('bills')
+            ->where('account_id', $accountId)
+            ->where('due_month', 0)
+            ->update(['paid' => 0]);
 
         return back();
     }

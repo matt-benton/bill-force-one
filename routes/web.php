@@ -18,7 +18,7 @@ Route::get('/', function () {
 Route::resource('accounts', 'AccountController');
 
 Route::prefix('accounts/{accountId}')->group(function () {
-    Route::get('bills/reset', 'BillController@resetAll')->name('bills.reset');
+    Route::get('bills/reset', 'BillController@resetMonthlyBills')->name('bills.reset');
     Route::resource('bills', 'BillController');
     Route::put('bills/{bill}/toggle', 'BillController@togglePaidStatus');
 });
