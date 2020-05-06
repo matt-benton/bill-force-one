@@ -4,7 +4,7 @@
         <span>${{ $bill->amount }}</span>
     </div>
     <div class="card-body">
-        <p class="due-text">Due on the {{ $bill->dueDateWithSuffix() }}
+        <p class="due-text">Due on {{ $bill->getMonthName() }} the {{ $bill->dueDateWithSuffix() }}
             @if ($bill->warning) 
                 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
                 <svg class="warning-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24">
