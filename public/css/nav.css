@@ -1,7 +1,6 @@
 nav {
     background-color: var(--color-grey-dark-3);
     height: 100%;
-    box-shadow: 0 8px 5px var(--color-grey-light-4);
 }
 
 .side-nav {
@@ -22,7 +21,7 @@ nav {
     justify-content: center;
     align-items: center;
     padding: var(--spacing-large);
-    border-bottom: .5px solid var(--color-white);
+    border-bottom: 0.5px solid var(--color-white);
 }
 
 .brand a {

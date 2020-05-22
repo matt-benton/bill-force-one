@@ -32,7 +32,7 @@ body {
 }
 
 .row {
-    margin: var(--spacing-medium) var(--spacing-large);
+    margin: var(--spacing-small) var(--spacing-large);
 }
 
 nav {

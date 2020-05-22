@@ -33,11 +33,11 @@
     margin-right: var(--spacing-small);
 }
 
-input[type=text] {
+input[type='text'] {
     padding: var(--spacing-medium);
     border: 0;
     border-bottom: 2px solid var(--color-primary-dark-3);
-    border-radius: 0;
+    border-radius: 3px;
     background-color: var(--color-grey-light-2);
     font-size: var(--font-medium);
 }
@@ -45,16 +45,19 @@ input[type=text] {
 textarea {
     padding: var(--spacing-medium);
     border: 0;
-    border-radius: 0;
+    border-radius: 3px;
     background-color: var(--color-grey-light-2);
     font-size: var(--font-medium);
 }
 
 select {
     padding: var(--spacing-medium);
+    padding-right: var(--spacing-larger);
     border: 0;
-    border-radius: 0;
-    background-color: var(--color-grey-light-2);
+    border-radius: 3px;
     font-size: var(--font-medium);
     appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: var(--color-grey-light-2) url('../../chevron-down.svg') right center no-repeat;
 }

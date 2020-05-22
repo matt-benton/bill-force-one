@@ -37,6 +37,8 @@
                 </form>
             </div>
         </div>
+    </div>
+    <div class="row">
         <div class="bills-list">
             @foreach ($bills as $bill)
                 @component('components.billCard', ['bill' => $bill]) @endcomponent
